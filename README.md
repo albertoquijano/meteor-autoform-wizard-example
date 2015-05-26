@@ -1,13 +1,14 @@
 meteor-wizard-example
 =====================
 
-This Meteor app demonstrates how to use [forwarder:autoform-wizard](https://github.com/forwarder/meteor-wizard).
+This Meteor app demonstrates how to use [kepler:autoform-wizard](https://github.com/kepler/meteor-autoform-wizard), a fork of [forwarder:autoform-wizard](https://github.com/forwarder/meteor-wizard).
 
 # License
 
 The MIT License (MIT)
 
 Copyright (c) 2014 Forwarder
+Copyright (c) 2015 Kepler
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

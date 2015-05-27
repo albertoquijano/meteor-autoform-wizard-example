@@ -90,7 +90,7 @@ if (Meteor.isClient) {
         }
     });
 
-    AutoForm.addHooks(['paymentInformation-form'], {
+    AutoForm.addHooks(['newOrderWizard', 'editOrderWizard'], {
         onSuccess: function (formType, result) {
             console.log("SUCCESS:", result);
             Router.go('viewOrder', {_id: result});
@@ -109,13 +109,8 @@ Router.route('/', function () {
     this.redirect('newOrder');
 });
 
-Router.route('/order/new', {
+Router.route('/order/new/:step?', {
     name: 'newOrder'
-});
-
-Router.route('/order/new/:step', {
-    name: 'newOrderStep',
-    template: 'newOrder'
 });
 
 Router.route('/order/:_id', {
@@ -125,16 +120,8 @@ Router.route('/order/:_id', {
     }
 });
 
-Router.route('/order/:_id/edit', {
+Router.route('/order/:_id/edit/:step?', {
     name: 'editOrder',
-    data: function () {
-        return Orders.findOne(this.params._id);
-    }
-});
-
-Router.route('/order/:_id/edit/:step', {
-    name: 'editOrderStep',
-    template: 'editOrder',
     data: function () {
         return Orders.findOne(this.params._id);
     }

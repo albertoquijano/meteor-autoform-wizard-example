@@ -11,7 +11,7 @@
 </template>
 
 <template name="newOrder">
-    {{> afWizard id="order" collection="Orders" route="newOrderStep" stepsTemplate="steps" buttonClasses="ui submit button" clearOnDestroy=true}}
+    {{> afWizard id="newOrderWizard" collection="Orders" route="newOrder" stepsTemplate="steps" buttonClasses="ui submit button" clearOnDestroy=true}}
 </template>
 
 <template name="contactInformation">
@@ -38,7 +38,7 @@
 <template name="editOrder">
     <p>Editing your order {{contactInformation.name}}.</p>
 
-    {{> afWizard id="editOrder" collection="Orders" doc=this route="editOrderStep" stepsTemplate="steps" buttonClasses="ui submit button" clearOnDestroy=true persist=false}}
+    {{> afWizard id="editOrderWizard" collection="Orders" doc=this route="editOrder" stepsTemplate="steps" buttonClasses="ui submit button" clearOnDestroy=true persist=false}}
     <!--{{> quickForm id="contact-information-form" doc=this schema=Schema.contactInformation}}-->
 </template>
 
